@@ -61,8 +61,12 @@
     // Sum up the instances of each of these
     const data = ['car', 'car', 'truck', 'truck', 'bike', 'walk', 'car', 'van', 'bike', 'walk', 'car', 'van', 'car', 'truck' ];
     console.log(data.reduce((accumulator,item)=>{
-      
-    }))
+      if(!accumulator[item]){
+        accumulator[item]=0;
+      }
+      accumulator[item]++;
+      return accumulator;
+    },{}))
   </script>
 </body>
 </html>
